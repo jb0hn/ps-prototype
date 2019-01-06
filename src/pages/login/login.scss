@@ -1,3 +1,16 @@
 page-login {
-
+    ::-webkit-scrollbar,
+    *::-webkit-scrollbar {
+        display: none;
+    }
+    .logo-style{
+        margin: auto;
+        padding-top: 50px;
+        padding-bottom: 20px;
+        align-items: center;
+        display: block;
+    }
+    h1{
+        margin-top: 75px;
+    }
 }

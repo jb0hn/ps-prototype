@@ -1,18 +1,42 @@
-<!--
-  Generated template for the LoginPage page.
+<ion-content>
+  <ion-grid>  
+    <ion-row>
+            <ion-col>
+                <img class="logo-style" src="../../assets/imgs/ug_blue.png" alt="Logo">
+            </ion-col>
+            <ion-col>
+                <h1 ion-text color="base" text-left>Portal Studenta</h1>
+            </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Kim jesteś?</ion-label>
+          <ion-select>
+            <ion-option selected>Student</ion-option>
+            <ion-option>Student MOST</ion-option>
+            <ion-option>Student Erasmus</ion-option>
+            <ion-option>Wymiana dwustronna</ion-option>
+            <ion-option>Słuchacz podyplomowy</ion-option>
+            <ion-option>Doktorant</ion-option>
+            <ion-option>Doktorant Most</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>Nr Indeksu</ion-label>
+          <ion-input type="email" name="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Hasło</ion-label>
+          <ion-input type="password" name="password"></ion-input>
+        </ion-item>
+        <button ion-button color="accent" name="button" (click)="loginClicked($event, button)" full>Zaloguj</button>
+        <a ion-text href="#">Nie pamiętasz hasła?</a>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
