@@ -7,12 +7,82 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>annoucements</ion-title>
+    <ion-title>Komunikaty</ion-title>
   </ion-navbar>
 
+<ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="annoucment">
+      <ion-segment-button value="classes">
+        Zajęcia
+      </ion-segment-button>
+      <ion-segment-button value="events">
+        Wydarzenia
+      </ion-segment-button>
+      <ion-segment-button value="messages">
+        Wiadomości
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
+<ion-content>
+  <div [ngSwitch]="annoucment">
+    <div *ngSwitchCase="'classes'">
+        <ion-card>
+          <ion-card-header><h2 ion-text color="primary">8 stycznia 2019 r.</h2></ion-card-header>
+          <ion-card-content>
+            <p>
+                Dr Agata Rudnik <b>odwołuje</b> zajęcia <u>Praca psychologa w branżach kreatywnych</u> w dniu <b>8.01.19 r</b>.! Termin odrabiana zajęć zostanie podany wkrótce.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header><h2 ion-text color="primary">1 stycznia 2019 r.</h2></ion-card-header>
+          <ion-card-content>
+            <p>
+                JM Rektor ogłasza <b>dni rektorskie</b> na okres <b>28.01.2019 – 10.02.2019</b>! Miłego wypoczynku życzy rektorat oraz studenci WMFI.
+            </p>
+          </ion-card-content>
+        </ion-card>
+    </div>
 
-<ion-content padding>
+    <div *ngSwitchCase="'events'">
+        <ion-card>
+          <ion-card-header><h2 ion-text color="primary">Noc Biologów - 11 stycznia 2019 r.</h2></ion-card-header>
+          <ion-card-content>
+            <p>
+                Wydział Biologii Uniwersytetu Gdańskiego, Międzuczelniany Wydział Biotechnologii UG i GUMed, Gdański Ogród Zoologiczny i Akwarium Gdyńskie MIR – PIB już po raz ósmy zapraszają na „Noc Biologów” czyli wykłady, warsztaty i pokazy prezentujące współczesną biologię. W tym roku biologiczny piątek przypada 11 stycznia 2019 r.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header><h2 ion-text color="primary">Gdańskie piątki z prawem karnym</h2></ion-card-header>
+          <ion-card-content>
+            <p>
+                Ideą otwartych, comiesięcznych spotkań naukowych „Gdańskie piątki z prawem karnym” jest z jednej strony zintensyfikowanie badań naukowych prowadzonych w Katedrze Prawa Karnego Materialnego i Kryminologii Wydziału Prawa i Administracji Uniwersytetu Gdańskiego, z drugiej dzielenie się wynikami tychże badań z całym środowiskiem naukowym. Przemiany współczesnego prawa karnego, jak i poddawanie prawa karnego presji populizmu penalnego czyni koniecznym ożywienie naukowej refleksji nad prawem karnym poprzez otwarcie się na społeczeństwo, dyskusję z nie-prawnikami, wreszcie jasne wyartykułowanie w procesie debaty racji naukowych i zestawienie ich z pozanaukowymi, spekulatywnymi poglądami na istotę prawa karnego.
+            </p>
+          </ion-card-content>
+        </ion-card>
+    </div>
 
+    <div *ngSwitchCase="'messages'">
+        <ion-card>
+          <ion-card-header><h2 ion-text color="primary">Nowe materiały</h2></ion-card-header>
+          <ion-card-content>
+            <p>
+                Uprzejmie informujemy, że prowadzący dr Natasza Kosakowska-Berezecka udostępniła Twojej grupie nowe materiały. Materiały można ściągnąć na Portalu Studenta (ps.ug.edu.pl) w zakładce Materiały.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header><h2 ion-text color="primary">Informacja</h2></ion-card-header>
+          <ion-card-content>
+            <p>
+                Informujemy, że nie uzyskał Pan zaliczenia okresu rozliczeniowego.
+                Prosimy o niezwłoczny kontakt z dziekanatem, w przeciwnym razie zostanie wszczęta procedura skreślenia ze studiów.
+            </p>
+          </ion-card-content>
+        </ion-card>
+    </div>
+  </div>
 </ion-content>
