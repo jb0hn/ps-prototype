@@ -8,6 +8,7 @@ import { ClassesPage } from "../pages/classes/classes";
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from "../pages/login/login";
+import { StudentIdPage } from "../pages/student-id/student-id";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     AnnoucementsPage,
     ClassesPage,
-    TabsPage
+    TabsPage,
+    StudentIdPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     AnnoucementsPage,
     ClassesPage,
-    TabsPage
+    TabsPage,
+    StudentIdPage
   ],
   providers: [
     StatusBar,

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { StudentIdPage } from "../student-id/student-id";
+
 /**
- * Generated class for the ProfilePage page.
+ * Generated class for the StudentIdPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,21 +10,16 @@ import { StudentIdPage } from "../student-id/student-id";
 
 @IonicPage()
 @Component({
-  selector: 'page-profile',
-  templateUrl: 'profile.html',
+  selector: 'page-student-id',
+  templateUrl: 'student-id.html',
 })
-export class ProfilePage {
+export class StudentIdPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
+    console.log('ionViewDidLoad StudentIdPage');
   }
 
-  showId(event, button) {
-    this.navCtrl.push(StudentIdPage, {
-      button: button
-    });
-  }
 }
