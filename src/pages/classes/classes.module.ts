@@ -4,7 +4,7 @@ import { ClassesPage } from './classes';
 
 @NgModule({
   declarations: [
-    ClassesPage,
+    ClassesPage
   ],
   imports: [
     IonicPageModule.forChild(ClassesPage),

@@ -6,11 +6,17 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Twój profil</ion-title>
-  </ion-navbar>
-
-</ion-header>
+    <ion-navbar>
+      <ion-title>{{title}}</ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="logout()">
+          <ion-icon name="exit" color="danger">
+          </ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  
+  </ion-header>
 
 
 <ion-content>

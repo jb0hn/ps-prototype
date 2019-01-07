@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { StudentIdPage } from "../student-id/student-id";
+import { LoginPage } from "../login/login";
+
 /**
  * Generated class for the ProfilePage page.
  *
@@ -15,6 +17,8 @@ import { StudentIdPage } from "../student-id/student-id";
 })
 export class ProfilePage {
 
+  title: string = "Profil";
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -26,5 +30,9 @@ export class ProfilePage {
     this.navCtrl.push(StudentIdPage, {
       button: button
     });
+  }
+
+  logout(){
+    this.navCtrl.push(LoginPage);
   }
 }

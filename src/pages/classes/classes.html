@@ -7,7 +7,13 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Zajęcia</ion-title>
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="power" color="danger">
+        </ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
