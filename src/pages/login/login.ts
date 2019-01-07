@@ -22,6 +22,16 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+
+
+    // hide the toolbar after the logout
+    let elements = document.querySelectorAll(".tabbar");
+
+    if (elements != null) {
+        Object.keys(elements).map((key) => {
+            elements[key].style.display = 'none';
+        });
+    }
   }
 
   loginClicked(event, button) {
